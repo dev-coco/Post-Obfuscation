@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "贴文混淆",
+  "description": "将贴文内容修改成唯一的内容。",
+  "version": "1.0.1",
+  "author": "Raz1ner",
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_scripts": [{
+    "matches": ["https://www.facebook.com/*"],
+    "js": ["injected.js"],
+    "run_at": "document_end"
+  }],
+  "web_accessible_resources": [{
+    "resources": ["content.js"],
+    "matches": ["https://www.facebook.com/*"]
+  }],
+  "externally_connectable": {
+    "matches": ["https://www.facebook.com/*"]
+  }
+}
